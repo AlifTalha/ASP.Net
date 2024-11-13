@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Customer's 'List</h2>
+<a href="/customer/create">Create</a>
+<table class="table table-bordered">
+    <tr>
+        <th>Customer Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Address</th>
+        <th>Joining Date</th>
+        <th></th>
+
+    </tr>
+    @foreach (var c in Model)
+    {
+        <tr>
+            <td>@c.CustomerId</td>
+            <td>@c.FirstName</td>
+            <td>@c.LastName</td>
+            <td>@c.Email</td>
+            <td>@c.Phone</td>
+            <td>@c.Address</td>
+            <td>@c.DateJoined</td>
+            <td>
+                <a href="@Url.Action("Details", "Customer", new { id = c.CustomerId })" class="btn btn-info">Details</a>
+                <a href="@Url.Action("Edit", "Customer", new { id = c.CustomerId })" class="btn btn-warning">Edit</a>
+                <a href="@Url.Action("Delete", "Customer", new { id = c.CustomerId })" class="btn btn-danger">Delete</a>
+
+            </td>
+        </tr>
+    }
+</table>
+

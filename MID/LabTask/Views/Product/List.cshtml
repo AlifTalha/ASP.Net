@@ -1,0 +1,35 @@
+﻿@model IEnumerable<LabTask.DTOs.ProductDTO>
+
+@{
+    ViewBag.Title = "Product List";
+}
+
+<h2>Product List</h2>
+<a href="/Product/Create">Create New Product</a>
+<table class="table table-bordered">
+    <tr>
+        <th>Product Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Stock Quantity</th>
+        <th>Category</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.ProductId</td>
+            <td>@p.Name</td>
+            <td>@p.Description</td>
+            <td>@p.Price</td>
+            <td>@p.StockQuantity</td>
+            <td>@p.Category</td>
+            <td>
+                <a href="/Product/Details/@p.ProductId" class="btn btn-info">Details</a>
+                <a href="/Product/Edit/@p.ProductId" class="btn btn-warning">Edit</a>
+                <a href="/Product/Delete/@p.ProductId" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

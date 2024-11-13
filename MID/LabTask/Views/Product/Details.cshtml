@@ -1,0 +1,16 @@
+﻿@model LabTask.DTOs.ProductDTO
+
+@{
+    ViewBag.Title = "Product Details";
+}
+
+<h2>Product Details</h2>
+
+<p><strong>Product Id:</strong> @Model.ProductId</p>
+<p><strong>Name:</strong> @Model.Name</p>
+<p><strong>Description:</strong> @Model.Description</p>
+<p><strong>Price:</strong> @Model.Price</p>
+<p><strong>Stock Quantity:</strong> @Model.StockQuantity</p>
+<p><strong>Category:</strong> @Model.Category</p>
+
+<a href="/Product/List" class="btn btn-secondary">Back to List</a>

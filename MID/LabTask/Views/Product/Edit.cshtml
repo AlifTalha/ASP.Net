@@ -1,0 +1,46 @@
+﻿@model LabTask.DTOs.ProductDTO
+
+@{
+    ViewBag.Title = "Edit Product";
+}
+
+<h2>Edit Product</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(m => m.ProductId)
+
+    <div>
+        <label for="Name">Name:</label>
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+    </div>
+
+    <div>
+        <label for="Description">Description:</label>
+        @Html.TextBoxFor(m => m.Description, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+    </div>
+
+    <div>
+        <label for="Price">Price:</label>
+        @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Price, "", new { @class = "text-danger" })
+    </div>
+
+    <div>
+        <label for="StockQuantity">Stock Quantity:</label>
+        @Html.TextBoxFor(m => m.StockQuantity, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.StockQuantity, "", new { @class = "text-danger" })
+    </div>
+
+    <div>
+        <label for="Category">Category:</label>
+        @Html.DropDownListFor(m => m.Category, (SelectList)ViewBag.Categories, "Select Category", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Category, "", new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+}

@@ -1,0 +1,47 @@
+﻿@model LabTask.DTOs.ProductDTO
+
+@{
+    ViewBag.Title = "Create Product";
+}
+
+<h2>Create Product</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div>
+        <label for="Name">Name</label>
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", id = "Name" })
+        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+    </div>
+
+    <div>
+        <label for="Description">Description</label>
+        @Html.TextBoxFor(m => m.Description, new { @class = "form-control", id = "Description" })
+        @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+    </div>
+
+    <div>
+        <label for="Price">Price</label>
+        @Html.TextBoxFor(m => m.Price, new { @class = "form-control", id = "Price" })
+        @Html.ValidationMessageFor(m => m.Price, "", new { @class = "text-danger" })
+    </div>
+
+    <div>
+        <label for="StockQuantity">Stock Quantity</label>
+        @Html.TextBoxFor(m => m.StockQuantity, new { @class = "form-control", id = "StockQuantity" })
+        @Html.ValidationMessageFor(m => m.StockQuantity, "", new { @class = "text-danger" })
+    </div>
+
+    <div>
+        <label for="Category">Category</label>
+        @Html.DropDownListFor(m => m.Category, (IEnumerable<SelectListItem>)ViewBag.Categories, "Select Category", new { @class = "form-control", id = "Category" })
+        @Html.ValidationMessageFor(m => m.Category, "", new { @class = "text-danger" })
+    </div>
+
+
+    <input type="submit" value="Create" class="btn btn-primary" />
+}
