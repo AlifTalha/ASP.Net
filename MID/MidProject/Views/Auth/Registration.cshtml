@@ -1,0 +1,50 @@
+﻿@model FinalDemo.DTOs.RegistrationDTO
+
+@{
+    ViewBag.Title = "Registration";
+}
+
+<h2>Registration</h2>
+
+@using (Html.BeginForm("Registration", "Auth", FormMethod.Post, new { @class = "form" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, "Name")
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Enter your name" })
+        @Html.ValidationMessageFor(m => m.Name, null, new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, "Email")
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Enter your email" })
+        @Html.ValidationMessageFor(m => m.Email, null, new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Role, "Role")
+        @Html.DropDownListFor(m => m.Role, new SelectList(new[] { "Admin", "Support Staff" }, "Select Role"), "Select Role", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Role, null, new { @class = "text-danger" })
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password, "Password")
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter a strong password" })
+        @Html.ValidationMessageFor(m => m.Password, null, new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.ConfirmPassword, "Confirm Password")
+        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "Re-enter your password" })
+        @Html.ValidationMessageFor(m => m.ConfirmPassword, null, new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+}
+
+@if (TempData["Msg"] != null)
+{
+    <div class="alert alert-warning">
+        @TempData["Msg"]
+    </div>
+}

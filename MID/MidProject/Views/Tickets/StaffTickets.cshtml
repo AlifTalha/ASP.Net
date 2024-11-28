@@ -1,0 +1,35 @@
+﻿@model IEnumerable<FinalDemo.DTOs.TicketDTO>
+
+@{
+    ViewBag.Title = "Assigned Tickets";
+}
+
+<h2>Assigned Tickets</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ticket ID</th>
+            <th>Issue</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ticket in Model)
+        {
+            <tr>
+                <td>@ticket.TicketId</td>
+                <td>@ticket.Issue</td>
+                <td>@ticket.Status</td>
+                <td>
+                    @if (ticket.Status != "Resolved")
+                    {
+                        <a href="@Url.Action("ResolveTicket", "Tickets", new { id = ticket.TicketId })" class="btn btn-success">Resolve</a>
+                    }
+                    <a href="@Url.Action("Details", "Tickets", new { id = ticket.TicketId })" class="btn btn-info">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

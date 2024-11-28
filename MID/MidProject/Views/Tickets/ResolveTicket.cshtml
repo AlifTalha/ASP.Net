@@ -1,0 +1,39 @@
+﻿@model FinalDemo.DTOs.TicketDTO
+
+@{
+    ViewBag.Title = "Resolve Ticket";
+}
+
+<h2>Resolve Ticket</h2>
+
+<div class="alert alert-warning">
+    <strong>Warning!</strong> Are you sure you want to mark this ticket as resolved?
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Ticket ID</th>
+                <th>Issue</th>
+                <th>Status</th>
+                <th>User ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.TicketId</td>
+                <td>@Model.Issue</td>
+                <td>@Model.Status</td>
+                <td>@Model.UserId</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+@using (Html.BeginForm("ResolveTicket", "Tickets", FormMethod.Post))
+{
+    <input type="hidden" name="id" value="@Model.TicketId" />
+    <button type="submit" class="btn btn-success">Resolve Ticket</button>
+    <a href="@Url.Action("StaffTickets", "Tickets")" class="btn btn-secondary">Cancel</a>
+}

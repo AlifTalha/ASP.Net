@@ -1,0 +1,26 @@
+﻿@model FinalDemo.DTOs.TicketDTO
+
+@{
+    ViewBag.Title = "Edit Ticket";
+}
+
+<h2>Edit Ticket</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Issue)
+        @Html.TextBoxFor(m => m.Issue, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Issue)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Status)
+        @Html.TextBoxFor(m => m.Status, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Status)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Ticket</button>
+}

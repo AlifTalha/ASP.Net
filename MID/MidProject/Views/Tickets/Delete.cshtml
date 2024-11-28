@@ -1,0 +1,20 @@
+﻿@model FinalDemo.DTOs.TicketDTO
+
+@{
+    ViewBag.Title = "Delete Ticket";
+}
+
+<h2>Delete Ticket</h2>
+
+<div class="alert alert-danger">
+    <p>Are you sure you want to delete this ticket?</p>
+    <p><strong>Issue: </strong>@Model.Issue</p>
+    <p><strong>Status: </strong>@Model.Status</p>
+</div>
+
+@using (Html.BeginForm("DeleteConfirmed", "Tickets", new { id = Model.TicketId }, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("Index", "Tickets")" class="btn btn-default">Cancel</a>
+}
