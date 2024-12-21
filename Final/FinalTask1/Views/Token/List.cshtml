@@ -1,0 +1,41 @@
+﻿@model IEnumerable<FinalTaskLab1.Models.Token>
+
+@{
+    ViewBag.Title = "Token List";
+}
+
+<h2>Token List</h2>
+
+@if (TempData["Info"] != null)
+{
+    <div class="alert alert-info">@TempData["Info"]</div>
+}
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Token Number</th>
+            <th>Counter Type</th>
+            <th>Created At</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var token in Model)
+        {
+            <tr>
+                <td>@token.Id</td>
+                <td>@token.TokenNumber</td>
+                <td>@token.CounterType</td>
+                <td>@token.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "Token")" class="btn btn-primary">Generate New Token</a>
