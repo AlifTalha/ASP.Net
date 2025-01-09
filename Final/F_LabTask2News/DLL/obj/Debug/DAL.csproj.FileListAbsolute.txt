@@ -1,0 +1,14 @@
+C:\Users\user\source\repos\NewsPL\DAL\bin\Debug\DAL.dll
+C:\Users\user\source\repos\NewsPL\DAL\bin\Debug\DAL.pdb
+C:\Users\user\source\repos\NewsPL\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\NewsPL\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\NewsPL\DAL\obj\Debug\DAL.dll
+C:\Users\user\source\repos\NewsPL\DAL\obj\Debug\DAL.pdb
+C:\Users\user\source\repos\NewsPL\DAL\bin\Debug\DAL.dll.config
+C:\Users\user\source\repos\NewsPL\DAL\bin\Debug\EntityFramework.dll
+C:\Users\user\source\repos\NewsPL\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\source\repos\NewsPL\DAL\bin\Debug\EntityFramework.xml
+C:\Users\user\source\repos\NewsPL\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\source\repos\NewsPL\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\user\source\repos\NewsPL\DAL\obj\Debug\DAL.Migrations.NewsInfo.resources
+C:\Users\user\source\repos\NewsPL\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
