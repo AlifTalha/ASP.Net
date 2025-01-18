@@ -23,5 +23,10 @@ namespace DAL
         {
             return new ProductRepo();
         }
+        public static IUserRepo UserData()
+        {
+            return new UserRepo();
+        }
+
     }
 }

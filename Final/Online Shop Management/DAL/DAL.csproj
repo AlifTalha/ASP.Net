@@ -56,17 +56,24 @@
     <Compile Include="EF\PMSContext.cs" />
     <Compile Include="EF\Tables\Category.cs" />
     <Compile Include="EF\Tables\Product.cs" />
+    <Compile Include="EF\Tables\User.cs" />
     <Compile Include="Interfaces\IProductFeatures.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
+    <Compile Include="Interfaces\IUserRepo.cs" />
     <Compile Include="Migrations\202501131254530_uploadTable.cs" />
     <Compile Include="Migrations\202501131254530_uploadTable.Designer.cs">
       <DependentUpon>202501131254530_uploadTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202501151139557_TableInit.cs" />
+    <Compile Include="Migrations\202501151139557_TableInit.Designer.cs">
+      <DependentUpon>202501151139557_TableInit.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\CategoryRepo.cs" />
     <Compile Include="Repos\ProductRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
+    <Compile Include="Repos\UserRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -75,6 +82,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202501131254530_uploadTable.resx">
       <DependentUpon>202501131254530_uploadTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202501151139557_TableInit.resx">
+      <DependentUpon>202501151139557_TableInit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

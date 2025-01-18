@@ -12,3 +12,4 @@ C:\Users\user\source\repos\TieePMS\DAL\obj\Debug\DAL.dll
 C:\Users\user\source\repos\TieePMS\DAL\obj\Debug\DAL.pdb
 C:\Users\user\source\repos\TieePMS\DAL\obj\Debug\DAL.Migrations.uploadTable.resources
 C:\Users\user\source\repos\TieePMS\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\user\source\repos\TieePMS\DAL\obj\Debug\DAL.Migrations.TableInit.resources
