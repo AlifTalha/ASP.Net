@@ -6,3 +6,6 @@ Register Page:
 
 Login Page:
 ![Image](https://github.com/user-attachments/assets/8f026815-2a8d-4a41-bd7d-51cfcca0feac)
+
+Dashboard:
+![Image](https://github.com/user-attachments/assets/b4a2e27e-ab58-42de-964a-1792d2444f52)
