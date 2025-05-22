@@ -18,3 +18,6 @@ Doctors Portal:
 
 Billing :
 ![Image](https://github.com/user-attachments/assets/01d2c96d-8656-47d9-b465-6f04eaafe598)
+
+Inventory:
+![Image](https://github.com/user-attachments/assets/faf4bf41-3c73-482d-b7ef-71023d90ccf5)
