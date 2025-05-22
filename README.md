@@ -15,3 +15,6 @@ Patient Portal:
 
 Doctors Portal:
 ![Image](https://github.com/user-attachments/assets/ed17fc29-758c-4f49-8fb6-0f4b011992e5)
+
+Billing :
+![Image](https://github.com/user-attachments/assets/01d2c96d-8656-47d9-b465-6f04eaafe598)
