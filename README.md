@@ -12,3 +12,6 @@ Dashboard:
 
 Patient Portal:
 ![Image](https://github.com/user-attachments/assets/be8d11ac-fab4-43e6-8f0a-2d970dc9e31b)
+
+Doctors Portal:
+![Image](https://github.com/user-attachments/assets/ed17fc29-758c-4f49-8fb6-0f4b011992e5)
