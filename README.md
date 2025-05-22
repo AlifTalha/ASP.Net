@@ -9,3 +9,6 @@ Login Page:
 
 Dashboard:
 ![Image](https://github.com/user-attachments/assets/b4a2e27e-ab58-42de-964a-1792d2444f52)
+
+Patient Portal:
+![Image](https://github.com/user-attachments/assets/be8d11ac-fab4-43e6-8f0a-2d970dc9e31b)
