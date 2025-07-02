@@ -1,0 +1,21 @@
+﻿@model IEnumerable<MeetingMinutesManagement.Models.MeetingMinutesDetails>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Product/Service Name</th>
+            <th>Quantity</th>
+            <th>Unit</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductService.Name</td>
+                <td>@item.Quantity</td>
+                <td>@item.ProductService.Unit</td>
+            </tr>
+        }
+    </tbody>
+</table>

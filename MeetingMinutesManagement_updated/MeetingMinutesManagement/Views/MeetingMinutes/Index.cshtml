@@ -1,0 +1,122 @@
+﻿@model MeetingMinutesManagement.Models.MeetingMinutesViewModel
+
+@{
+    ViewData["Title"] = "Meeting Minutes";
+}
+
+<div class="container">
+    <h1>Meeting Minutes</h1>
+
+    <form asp-action="Create" method="post" id="meetingMinutesForm">
+        <div class="form-group">
+            <label>Customer Type</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="CustomerType" id="corporateCustomer" value="Corporate" checked>
+                <label class="form-check-label" for="corporateCustomer">Corporate</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="CustomerType" id="individualCustomer" value="Individual">
+                <label class="form-check-label" for="individualCustomer">Individual</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="CustomerId">Customer Name*</label>
+            <select class="form-control" id="CustomerId" name="CustomerId" required>
+                <option value="">-- Select Customer --</option>
+                @foreach (var customer in Model.CorporateCustomers)
+                {
+                    <option value="@customer.CorporateCustomerId">@customer.CustomerName</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="MeetingDate">Date</label>
+                <input type="date" class="form-control" id="MeetingDate" name="MeetingDate" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="MeetingTime">Time</label>
+                <input type="time" class="form-control" id="MeetingTime" name="MeetingTime" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="MeetingPlace">Meeting Place*</label>
+                <input type="text" class="form-control" id="MeetingPlace" name="MeetingPlace" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="AttendsFromClient">Attends From Client Side*</label>
+            <textarea class="form-control" id="AttendsFromClient" name="AttendsFromClient" rows="2" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="AttendsFromHost">Attends From Host Side*</label>
+            <textarea class="form-control" id="AttendsFromHost" name="AttendsFromHost" rows="2" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="MeetingAgenda">Meeting Agenda*</label>
+            <textarea class="form-control" id="MeetingAgenda" name="MeetingAgenda" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="MeetingDiscussion">Meeting Discussion*</label>
+            <textarea class="form-control" id="MeetingDiscussion" name="MeetingDiscussion" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="MeetingDecision">Meeting Decision*</label>
+            <textarea class="form-control" id="MeetingDecision" name="MeetingDecision" rows="3" required></textarea>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">
+                <h5>Interested Product/Service</h5>
+            </div>
+            <div class="card-body">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="ProductServiceId">Product/Service</label>
+                        <select class="form-control" id="ProductServiceId">
+                            <option value="">-- Select Product/Service --</option>
+                            @foreach (var product in Model.ProductServices)
+                            {
+                                <option value="@product.ProductServiceId" data-unit="@product.Unit">@product.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="Quantity">Quantity</label>
+                        <input type="number" class="form-control" id="Quantity" min="1" value="1">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label>&nbsp;</label>
+                        <button type="button" class="btn btn-primary btn-block" id="addProduct">Add</button>
+                    </div>
+                </div>
+
+                <table class="table table-bordered mt-3" id="productTable">
+                    <thead>
+                        <tr>
+                            <th>Product/Service Name</th>
+                            <th>Quantity</th>
+                            <th>Unit</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Products will be added here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Save Meeting Minutes</button>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/meetingMinutes.js"></script>
+}

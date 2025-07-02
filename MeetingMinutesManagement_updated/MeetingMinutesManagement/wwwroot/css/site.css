@@ -1,0 +1,25 @@
+/* Add any custom styles here */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Style for validation messages */
+.field-validation-error {
+    color: #dc3545;
+    font-size: 0.875em;
+}
+
+/* Style for required field indicators */
+.required:after {
+    content: " *";
+    color: #dc3545;
+}
